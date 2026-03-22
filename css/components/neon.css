@@ -1,0 +1,161 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Neon Effects
+   Text glow, flicker animations, and neon
+   border effects for the diner aesthetic.
+   ============================================ */
+
+/* ---- NEON TEXT GLOW ---- */
+
+.neon-text {
+  color: var(--color-neon-pink);
+  text-shadow:
+    0 0 5px rgba(255, 107, 157, 0.8),
+    0 0 10px rgba(255, 107, 157, 0.6),
+    0 0 20px rgba(255, 107, 157, 0.4),
+    0 0 40px rgba(255, 107, 157, 0.2);
+}
+
+.neon-text--cyan {
+  color: var(--color-neon-cyan);
+  text-shadow:
+    0 0 5px rgba(0, 229, 255, 0.8),
+    0 0 10px rgba(0, 229, 255, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.4),
+    0 0 40px rgba(0, 229, 255, 0.2);
+}
+
+.neon-text--red {
+  color: var(--color-marinara-red);
+  text-shadow:
+    0 0 5px rgba(192, 57, 43, 0.8),
+    0 0 10px rgba(192, 57, 43, 0.6),
+    0 0 20px rgba(192, 57, 43, 0.4),
+    0 0 40px rgba(192, 57, 43, 0.2);
+}
+
+/* ---- NEON FLICKER ---- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .neon-flicker {
+    animation: neonFlicker 4s ease-in-out infinite;
+  }
+
+  .neon-flicker--fast {
+    animation: neonFlicker 2.5s ease-in-out infinite;
+  }
+
+  .neon-flicker--slow {
+    animation: neonFlicker 6s ease-in-out infinite;
+  }
+
+  @keyframes neonFlicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    3% {
+      opacity: 0.4;
+    }
+    6% {
+      opacity: 1;
+    }
+    7% {
+      opacity: 0.6;
+    }
+    9% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    52% {
+      opacity: 0.5;
+    }
+    53% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    82% {
+      opacity: 0.7;
+    }
+    83% {
+      opacity: 1;
+    }
+  }
+}
+
+/* ---- NEON BORDER GLOW ---- */
+
+.neon-border {
+  border: 2px solid var(--color-neon-pink);
+  box-shadow:
+    0 0 5px rgba(255, 107, 157, 0.3),
+    0 0 10px rgba(255, 107, 157, 0.2),
+    inset 0 0 5px rgba(255, 107, 157, 0.1);
+  transition: box-shadow var(--duration-normal) var(--ease-default);
+}
+
+.neon-border:hover {
+  box-shadow:
+    0 0 10px rgba(255, 107, 157, 0.5),
+    0 0 20px rgba(255, 107, 157, 0.3),
+    0 0 40px rgba(255, 107, 157, 0.15),
+    inset 0 0 10px rgba(255, 107, 157, 0.15);
+}
+
+.neon-border--cyan {
+  border-color: var(--color-neon-cyan);
+  box-shadow:
+    0 0 5px rgba(0, 229, 255, 0.3),
+    0 0 10px rgba(0, 229, 255, 0.2),
+    inset 0 0 5px rgba(0, 229, 255, 0.1);
+}
+
+.neon-border--cyan:hover {
+  box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.5),
+    0 0 20px rgba(0, 229, 255, 0.3),
+    0 0 40px rgba(0, 229, 255, 0.15),
+    inset 0 0 10px rgba(0, 229, 255, 0.15);
+}
+
+/* ---- NEON UNDERLINE ---- */
+
+.neon-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.neon-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-neon-pink);
+  box-shadow:
+    0 0 5px rgba(255, 107, 157, 0.8),
+    0 0 10px rgba(255, 107, 157, 0.4);
+}
+
+/* ---- NEON DOT / INDICATOR ---- */
+
+.neon-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-neon-pink);
+  box-shadow:
+    0 0 4px rgba(255, 107, 157, 0.8),
+    0 0 8px rgba(255, 107, 157, 0.4);
+}
+
+.neon-dot--green {
+  background-color: var(--color-basil-green);
+  box-shadow:
+    0 0 4px rgba(46, 125, 50, 0.8),
+    0 0 8px rgba(46, 125, 50, 0.4);
+}

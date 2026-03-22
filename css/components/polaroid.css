@@ -1,0 +1,163 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Polaroid Cards (Portfolio)
+   Tilted photo cards with tape effect.
+   ============================================ */
+
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .polaroid-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- CARD ---- */
+
+.polaroid {
+  background-color: var(--color-flour-white);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Random tilts */
+.polaroid:nth-child(1) { transform: rotate(-2deg); }
+.polaroid:nth-child(2) { transform: rotate(1.5deg); }
+.polaroid:nth-child(3) { transform: rotate(-1deg); }
+.polaroid:nth-child(4) { transform: rotate(2.5deg); }
+
+.polaroid:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-above);
+}
+
+/* ---- Tape Effect ---- */
+
+.polaroid::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 60px;
+  height: 20px;
+  background-color: rgba(255, 245, 225, 0.7);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  opacity: 0.8;
+}
+
+/* ---- Image Area ---- */
+
+.polaroid-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--color-parchment);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.polaroid-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--color-parchment), var(--color-mozzarella-cream));
+}
+
+/* ---- Hover Overlay ---- */
+
+.polaroid-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(26, 26, 26, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-default);
+  border-radius: var(--radius-sm);
+}
+
+.polaroid:hover .polaroid-overlay {
+  opacity: 1;
+}
+
+.polaroid-overlay .btn {
+  transform: translateY(10px);
+  transition: transform var(--duration-normal) var(--ease-bounce);
+}
+
+.polaroid:hover .polaroid-overlay .btn {
+  transform: translateY(0);
+}
+
+/* ---- Caption ---- */
+
+.polaroid-caption {
+  padding: 0 var(--space-xs);
+}
+
+.polaroid-dish-name {
+  font-family: var(--font-accent);
+  font-size: var(--text-xl);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.polaroid-real-name {
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-smoke);
+  margin-bottom: var(--space-sm);
+}
+
+.polaroid-description {
+  font-size: var(--text-sm);
+  color: var(--color-smoke);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+/* ---- Tech / Ingredients Tags ---- */
+
+.polaroid-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+/* ---- Meta Row ---- */
+
+.polaroid-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-smoke);
+  padding-top: var(--space-sm);
+  border-top: 1px dashed rgba(139, 69, 19, 0.15);
+}
+
+.polaroid-flavor {
+  font-family: var(--font-accent);
+  font-size: var(--text-sm);
+  color: var(--color-pepperoni-orange);
+  font-style: italic;
+}

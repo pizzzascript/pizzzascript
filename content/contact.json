@@ -1,0 +1,63 @@
+{
+  "section_title": "Place Your Order",
+  "section_subtitle": "Hungry for a new website? Let's cook.",
+  "form_intro": "Fill out the order slip below and I'll get back to you faster than a pizza delivery on a Friday night.",
+  "form_fields": [
+    {
+      "name": "customer_name",
+      "label": "Your Name",
+      "placeholder": "Chef needs to know who's ordering",
+      "type": "text",
+      "required": true,
+      "error_message": "Every order needs a name, Chef."
+    },
+    {
+      "name": "email",
+      "label": "Your Email",
+      "placeholder": "For the digital receipt",
+      "type": "email",
+      "required": true,
+      "error_message": "We need a valid email to send your order confirmation."
+    },
+    {
+      "name": "project_type",
+      "label": "What Are You Craving?",
+      "type": "select",
+      "required": true,
+      "options": [
+        { "value": "", "label": "Pick from the menu..." },
+        { "value": "margherita", "label": "🍕 The Classic Margherita — Landing Page" },
+        { "value": "supreme", "label": "🍕 The Supreme — Full Website" },
+        { "value": "deep-dish", "label": "🥘 The Deep Dish — Web Application" },
+        { "value": "calzone", "label": "🥟 The Calzone — UI/UX Design" },
+        { "value": "slice", "label": "🔪 The Slice — Bug Fix / Small Task" }
+      ],
+      "error_message": "Please pick something from the menu!"
+    },
+    {
+      "name": "budget",
+      "label": "How Much Dough? 💰",
+      "type": "range",
+      "min": 500,
+      "max": 10000,
+      "step": 500,
+      "default_value": 3000,
+      "format": "${value}",
+      "required": false
+    },
+    {
+      "name": "details",
+      "label": "Special Instructions",
+      "placeholder": "Extra toppings? Dietary restrictions? Tell me everything...",
+      "type": "textarea",
+      "required": false,
+      "rows": 5
+    }
+  ],
+  "submit_button": {
+    "text": "🔥 Fire Up the Oven!",
+    "aria_label": "Submit your project inquiry"
+  },
+  "success_message": "🍕 Order received! I'll start preheating your project and get back to you within 24 hours.",
+  "error_message": "Oops! Something went wrong with your order. Please try again or email me directly."
+}

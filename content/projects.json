@@ -1,0 +1,54 @@
+{
+  "section_title": "Chef's Specials",
+  "section_subtitle": "Our finest creations. Made with love and late nights.",
+  "projects": [
+    {
+      "dish_name": "The Spicy Arrabiata",
+      "real_name": "NovaBrew E-Commerce",
+      "description": "A fiery online storefront for an artisanal coffee brand. Custom product filtering, cart system, and a checkout flow smoother than a double espresso.",
+      "ingredients_used": ["React", "Next.js", "Tailwind CSS", "Firebase"],
+      "cooking_time": "6 weeks",
+      "served_to": "E-Commerce Startup",
+      "flavor_profile": "Bold & Modern",
+      "cta_text": "👀 Taste It",
+      "live_url": "#",
+      "color_theme": "warm"
+    },
+    {
+      "dish_name": "The Truffle Royale",
+      "real_name": "Arcadia Architecture Studio",
+      "description": "A refined portfolio for an architecture firm. Smooth scroll transitions, high-res project galleries, and an aesthetic as clean as their blueprints.",
+      "ingredients_used": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "cooking_time": "4 weeks",
+      "served_to": "Architecture Firm",
+      "flavor_profile": "Elegant & Minimal",
+      "cta_text": "👀 Taste It",
+      "live_url": "#",
+      "color_theme": "cool"
+    },
+    {
+      "dish_name": "The BBQ Blazer",
+      "real_name": "FitPulse Fitness Tracker",
+      "description": "A full-stack fitness dashboard with real-time data visualization, user profiles, and workout tracking. Heavy on the features, light on the load time.",
+      "ingredients_used": ["React", "Node.js", "TypeScript", "Firebase"],
+      "cooking_time": "8 weeks",
+      "served_to": "Health & Fitness Startup",
+      "flavor_profile": "Spicy & Technical",
+      "cta_text": "👀 Taste It",
+      "live_url": "#",
+      "color_theme": "vibrant"
+    },
+    {
+      "dish_name": "The Garden Fresh",
+      "real_name": "Willow & Sage Florist",
+      "description": "A charming website for a local florist with online ordering, seasonal collections, and a design that blooms on every screen size.",
+      "ingredients_used": ["HTML", "CSS", "JavaScript", "Figma"],
+      "cooking_time": "3 weeks",
+      "served_to": "Local Small Business",
+      "flavor_profile": "Fresh & Charming",
+      "cta_text": "👀 Taste It",
+      "live_url": "#",
+      "color_theme": "natural"
+    }
+  ]
+}

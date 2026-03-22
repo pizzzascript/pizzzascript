@@ -1,0 +1,140 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Testimonial Pins
+   Corkboard-style review cards.
+   ============================================ */
+
+.corkboard {
+  background-color: #5C3A21;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(92, 58, 33, 0.8), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(92, 58, 33, 0.8), transparent 50%),
+    linear-gradient(135deg, #5C3A21 0%, #4A2E18 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.corkboard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/textures/noise.svg');
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.corkboard-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  position: relative;
+  z-index: var(--z-above);
+}
+
+@media (min-width: 640px) {
+  .corkboard-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- TESTIMONIAL CARD ---- */
+
+.testimonial-pin {
+  background-color: var(--color-flour-white);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xl);
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.testimonial-pin:nth-child(1) { transform: rotate(-1.5deg); }
+.testimonial-pin:nth-child(2) { transform: rotate(1deg); }
+.testimonial-pin:nth-child(3) { transform: rotate(0.5deg); }
+.testimonial-pin:nth-child(4) { transform: rotate(-0.8deg); }
+
+.testimonial-pin:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---- Pin Dot ---- */
+
+.testimonial-pin::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-pin:nth-child(1)::before { background-color: var(--color-marinara-red); }
+.testimonial-pin:nth-child(2)::before { background-color: var(--color-basil-green); }
+.testimonial-pin:nth-child(3)::before { background-color: var(--color-pepperoni-orange); }
+.testimonial-pin:nth-child(4)::before { background-color: var(--color-neon-cyan); }
+
+/* ---- Quote ---- */
+
+.testimonial-quote {
+  font-family: var(--font-accent);
+  font-size: var(--text-lg);
+  color: var(--color-charcoal);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  position: relative;
+  padding-left: var(--space-lg);
+}
+
+.testimonial-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  color: var(--color-marinara-red);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* ---- Rating (Pizza Slices) ---- */
+
+.testimonial-rating {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-md);
+  letter-spacing: 2px;
+}
+
+/* ---- Author ---- */
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.testimonial-author-name {
+  font-family: var(--font-accent);
+  font-size: var(--text-lg);
+  color: var(--color-charcoal);
+  font-weight: 700;
+}
+
+.testimonial-author-role {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-smoke);
+}
+
+.testimonial-date {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-light-smoke);
+  margin-top: var(--space-sm);
+}

@@ -1,0 +1,165 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Ingredient Badges (Skills)
+   Pantry shelf layout with proficiency bars.
+   ============================================ */
+
+/* ---- SHELF GROUP ---- */
+
+.shelf {
+  margin-bottom: var(--space-2xl);
+}
+
+.shelf:last-child {
+  margin-bottom: 0;
+}
+
+.shelf-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px dashed rgba(139, 69, 19, 0.2);
+}
+
+.shelf-emoji {
+  font-size: var(--text-2xl);
+}
+
+.shelf-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-crust-brown);
+}
+
+.shelf-category {
+  font-family: var(--font-accent);
+  font-size: var(--text-md);
+  color: var(--color-smoke);
+  font-style: italic;
+  margin-left: auto;
+}
+
+@media (max-width: 639px) {
+  .shelf-category {
+    display: none;
+  }
+}
+
+/* ---- INGREDIENT ITEMS GRID ---- */
+
+.shelf-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+@media (max-width: 639px) {
+  .shelf-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- INDIVIDUAL BADGE ---- */
+
+.ingredient-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-parchment);
+  border: 1px solid rgba(139, 69, 19, 0.15);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  cursor: default;
+  position: relative;
+}
+
+.ingredient-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-basil-green);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ingredient-badge:hover {
+    animation: wobble 0.4s ease-in-out;
+  }
+
+  @keyframes wobble {
+    0% { transform: translateY(-2px) rotate(0deg); }
+    25% { transform: translateY(-2px) rotate(1.5deg); }
+    50% { transform: translateY(-2px) rotate(-1.5deg); }
+    75% { transform: translateY(-2px) rotate(0.5deg); }
+    100% { transform: translateY(-2px) rotate(0deg); }
+  }
+}
+
+/* ---- Icon ---- */
+
+.ingredient-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--color-crust-brown);
+}
+
+.ingredient-badge:hover .ingredient-icon {
+  color: var(--color-basil-green);
+}
+
+/* ---- Info ---- */
+
+.ingredient-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ingredient-name {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+/* ---- Freshness / Proficiency Bar ---- */
+
+.proficiency-bar {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(139, 69, 19, 0.15);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.proficiency-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-basil-green), #4CAF50);
+  transition: width var(--duration-slow) var(--ease-smooth);
+  width: 0%;
+}
+
+.ingredient-badge.animate-in .proficiency-fill {
+  width: var(--proficiency);
+}
+
+/* ---- Tooltip ---- */
+
+.ingredient-freshness {
+  font-family: var(--font-accent);
+  font-size: var(--text-xs);
+  color: var(--color-smoke);
+  margin-top: var(--space-xs);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: var(--transition-fast);
+}
+
+.ingredient-badge:hover .ingredient-freshness {
+  opacity: 1;
+  transform: translateY(0);
+}

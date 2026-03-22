@@ -1,0 +1,27 @@
+{
+  "title": "Pizza Script — Hand-Crafted Websites, Made from Scratch",
+  "description": "Freelance web developer serving custom-built websites, web apps, and UI/UX design. Like a great pizza, every project is made from scratch with fresh ingredients and zero shortcuts.",
+  "keywords": [
+    "freelance web developer",
+    "portfolio",
+    "web design",
+    "frontend developer",
+    "custom websites",
+    "landing pages",
+    "web applications",
+    "UI UX design",
+    "React developer",
+    "JavaScript developer"
+  ],
+  "og_title": "🍕 Pizza Script — Hand-Crafted Websites, Made from Scratch",
+  "og_description": "Freelance web developer cooking up custom websites, apps, and designs. Fresh ingredients, zero preservatives, 100% organic code.",
+  "og_image_alt": "Pizza Script portfolio — a retro pizzeria-themed web developer portfolio with neon signs and vintage kitchen aesthetic",
+  "og_type": "website",
+  "og_url": "https://pizzascript.dev",
+  "twitter_card": "summary_large_image",
+  "twitter_title": "🍕 Pizza Script — Websites Made from Scratch",
+  "twitter_description": "Freelance web dev serving hand-crafted websites. No frozen templates. No preservatives.",
+  "language": "en",
+  "theme_color": "#C0392B",
+  "author": "Pizza Script"
+}

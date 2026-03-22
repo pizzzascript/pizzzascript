@@ -1,0 +1,56 @@
+{
+  "section_title": "Today's Specials",
+  "section_subtitle": "Pick your flavor. Every pie is custom-made to order.",
+  "items": [
+    {
+      "name": "The Classic Margherita",
+      "emoji": "🍕",
+      "real_service": "Landing Page",
+      "description": "Clean, simple, elegant. Just the essentials, done perfectly. One page, maximum impact — the timeless recipe that never fails.",
+      "ingredients": ["HTML", "CSS", "JavaScript"],
+      "cooking_time": "1–2 weeks",
+      "price_range": "$$",
+      "icon_hint": "pizza-margherita"
+    },
+    {
+      "name": "The Supreme",
+      "emoji": "🍕",
+      "real_service": "Full Website",
+      "description": "Loaded with everything you need. Multi-page, responsive, SEO-optimized, and served with a side of analytics. The crowd-pleaser.",
+      "ingredients": ["React", "Next.js", "Tailwind CSS", "SEO"],
+      "cooking_time": "3–5 weeks",
+      "price_range": "$$$",
+      "icon_hint": "pizza-supreme"
+    },
+    {
+      "name": "The Deep Dish",
+      "emoji": "🥘",
+      "real_service": "Web Application",
+      "description": "Rich, layered, and complex. Custom logic, database integration, user authentication — this one takes time, but it's worth every bite.",
+      "ingredients": ["React", "Node.js", "Firebase", "TypeScript"],
+      "cooking_time": "6–10 weeks",
+      "price_range": "$$$$",
+      "icon_hint": "pizza-deep-dish"
+    },
+    {
+      "name": "The Calzone",
+      "emoji": "🥟",
+      "real_service": "UI/UX Design",
+      "description": "Beautiful on the outside, perfectly structured inside. Wireframes, prototypes, and pixel-perfect mockups — all folded into one delicious package.",
+      "ingredients": ["Figma", "Prototyping", "Design Systems"],
+      "cooking_time": "2–3 weeks",
+      "price_range": "$$",
+      "icon_hint": "calzone"
+    },
+    {
+      "name": "The Slice",
+      "emoji": "🔪",
+      "real_service": "Bug Fix / Small Task",
+      "description": "Quick, affordable, no-fuss. Got a bug? Need a tweak? A single slice is all you need. Fast turnaround, no minimum order.",
+      "ingredients": ["Debugging", "CSS Fixes", "Performance"],
+      "cooking_time": "1–3 days",
+      "price_range": "$",
+      "icon_hint": "pizza-slice"
+    }
+  ]
+}

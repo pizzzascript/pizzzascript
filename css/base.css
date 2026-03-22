@@ -1,0 +1,212 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Base Typography & Globals
+   Global styles applied to the body and 
+   common elements.
+   ============================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+/* ---- HEADINGS ---- */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-text-light);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- BODY TEXT ---- */
+
+p {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ---- LINKS ---- */
+
+a {
+  color: var(--color-accent);
+  transition: color var(--duration-fast) var(--ease-default);
+}
+
+a:hover {
+  color: var(--color-neon-pink);
+}
+
+/* ---- SECTION TITLES ---- */
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-family: var(--font-accent);
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  font-style: italic;
+}
+
+/* ---- SELECTION ---- */
+
+::selection {
+  background-color: var(--color-marinara-red);
+  color: var(--color-flour-white);
+}
+
+/* ---- SCROLLBAR ---- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-counter-brown);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-crust-brown);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-counter-brown);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-marinara-red);
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-color: var(--color-crust-brown) var(--color-counter-brown);
+  scrollbar-width: thin;
+}
+
+/* ---- RESPONSIVE TYPOGRAPHY ---- */
+
+@media (max-width: 639px) {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+
+  h2, .section-title {
+    font-size: var(--text-sm);
+  }
+
+  h3 {
+    font-size: var(--text-xs);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--text-5xl);
+  }
+
+  h2, .section-title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ---- TAGS / PILLS ---- */
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-counter-brown);
+  color: var(--color-mozzarella-cream);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
+}
+
+.tag--green {
+  background-color: var(--color-basil-green);
+}
+
+.tag--orange {
+  background-color: var(--color-pepperoni-orange);
+}
+
+.tag--red {
+  background-color: var(--color-marinara-red);
+}

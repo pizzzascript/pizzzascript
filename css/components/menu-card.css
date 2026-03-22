@@ -1,0 +1,122 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Menu Cards (Services)
+   Parchment-style cards for the specials board.
+   ============================================ */
+
+.menu-card {
+  background-color: var(--color-parchment);
+  border: 2px solid rgba(139, 69, 19, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-marinara-red), var(--color-pepperoni-orange));
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-default);
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-neon-pink);
+}
+
+.menu-card:hover::before {
+  opacity: 1;
+}
+
+/* ---- Card Header ---- */
+
+.menu-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.menu-card-emoji {
+  font-size: var(--text-3xl);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.menu-card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  color: var(--color-charcoal);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-xs);
+}
+
+.menu-card-service {
+  font-family: var(--font-accent);
+  font-size: var(--text-lg);
+  color: var(--color-smoke);
+  font-style: italic;
+}
+
+/* ---- Card Body ---- */
+
+.menu-card-description {
+  font-size: var(--text-sm);
+  color: var(--color-smoke);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- Ingredients Tags ---- */
+
+.menu-card-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.menu-card-ingredient {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-counter-brown);
+  color: var(--color-mozzarella-cream);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ---- Card Footer / Meta ---- */
+
+.menu-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px dashed rgba(139, 69, 19, 0.2);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-smoke);
+}
+
+.menu-card-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.menu-card-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  color: var(--color-basil-green);
+  letter-spacing: var(--tracking-wide);
+}

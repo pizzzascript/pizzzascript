@@ -1,0 +1,60 @@
+{
+  "section_title": "The Pantry",
+  "section_subtitle": "Every great recipe starts with fresh, quality ingredients.",
+  "shelves": [
+    {
+      "name": "Base & Dough",
+      "emoji": "🫙",
+      "real_category": "Core Languages",
+      "items": [
+        { "name": "HTML", "proficiency": 95, "freshness": "Daily staple" },
+        { "name": "CSS", "proficiency": 92, "freshness": "Always in stock" },
+        { "name": "JavaScript", "proficiency": 90, "freshness": "Freshly ground" },
+        { "name": "TypeScript", "proficiency": 82, "freshness": "Premium grade" }
+      ]
+    },
+    {
+      "name": "Sauce",
+      "emoji": "🥫",
+      "real_category": "Frameworks & Libraries",
+      "items": [
+        { "name": "React", "proficiency": 88, "freshness": "House recipe" },
+        { "name": "Next.js", "proficiency": 85, "freshness": "Imported fresh" },
+        { "name": "Vue", "proficiency": 72, "freshness": "Seasonal pick" },
+        { "name": "Tailwind CSS", "proficiency": 90, "freshness": "Chef's favorite" }
+      ]
+    },
+    {
+      "name": "Cheese",
+      "emoji": "🧀",
+      "real_category": "Backend & Databases",
+      "items": [
+        { "name": "Node.js", "proficiency": 85, "freshness": "Aged perfectly" },
+        { "name": "Python", "proficiency": 70, "freshness": "Farm fresh" },
+        { "name": "Express", "proficiency": 80, "freshness": "Reliable classic" },
+        { "name": "Firebase", "proficiency": 78, "freshness": "Quick-melt" }
+      ]
+    },
+    {
+      "name": "Toppings",
+      "emoji": "🫒",
+      "real_category": "Tools & Platforms",
+      "items": [
+        { "name": "Git", "proficiency": 90, "freshness": "Essential" },
+        { "name": "Figma", "proficiency": 82, "freshness": "Design-grade" },
+        { "name": "VS Code", "proficiency": 95, "freshness": "Daily driver" },
+        { "name": "Webpack", "proficiency": 75, "freshness": "Well-seasoned" }
+      ]
+    },
+    {
+      "name": "Secret Spice",
+      "emoji": "🌶️",
+      "real_category": "Animation & 3D",
+      "items": [
+        { "name": "GSAP", "proficiency": 78, "freshness": "Motion magic" },
+        { "name": "Three.js", "proficiency": 65, "freshness": "Experimental batch" },
+        { "name": "Framer Motion", "proficiency": 74, "freshness": "Smooth blend" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "section_title": "The Recipe",
+  "section_subtitle": "From raw dough to golden crust. Here's how the magic happens.",
+  "steps": [
+    {
+      "step_number": 1,
+      "recipe_name": "Prep the Dough",
+      "real_step": "Discovery & Research",
+      "description": "We knead through your goals, audience, and competitors. Every great website starts with understanding what makes your business unique.",
+      "duration": "2–3 days",
+      "chef_note": "A rushed dough never rises. Take time with this step — it shapes everything."
+    },
+    {
+      "step_number": 2,
+      "recipe_name": "Choose Your Toppings",
+      "real_step": "Design & Wireframing",
+      "description": "You pick the flavors, I arrange them beautifully. Wireframes, mockups, and prototypes — tasted and approved before we fire up the oven.",
+      "duration": "3–5 days",
+      "chef_note": "Less can be more. The best pizzas don't need 47 toppings."
+    },
+    {
+      "step_number": 3,
+      "recipe_name": "Into the Oven",
+      "real_step": "Development",
+      "description": "Code is written. Pixels are placed. The kitchen gets hot. This is where the recipe transforms from ingredients into something real.",
+      "duration": "1–4 weeks",
+      "chef_note": "I keep the oven door closed — no peeking! But I'll send you progress updates."
+    },
+    {
+      "step_number": 4,
+      "recipe_name": "Quality Check",
+      "real_step": "Testing & Review",
+      "description": "No burnt edges. No raw centers. Every page is tested across devices and browsers. Your feedback is the final seasoning before we serve.",
+      "duration": "2–3 days",
+      "chef_note": "I test on real devices, not just the ones I like. Your users won't all have the latest iPhone."
+    },
+    {
+      "step_number": 5,
+      "recipe_name": "Serve Hot",
+      "real_step": "Launch & Delivery",
+      "description": "Fresh out of the oven, straight to your domain. Deployed, optimized, and ready for your audience to devour.",
+      "duration": "1 day",
+      "chef_note": "Launching is the beginning, not the end. I stick around for seconds."
+    }
+  ]
+}

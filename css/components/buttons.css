@@ -1,0 +1,163 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Buttons
+   Primary, secondary, and neon button variants.
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    font-size: var(--text-sm);
+    padding: var(--space-md) var(--space-2xl);
+  }
+}
+
+/* ---- PRIMARY: Marinara Red ---- */
+
+.btn-primary {
+  background-color: var(--color-marinara-red);
+  color: var(--color-flour-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background-color: #D94436;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg),
+              0 0 20px rgba(192, 57, 43, 0.4);
+  color: var(--color-flour-white);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---- SECONDARY: Outlined / Chalk ---- */
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-mozzarella-cream);
+  border: var(--border-medium) var(--color-mozzarella-cream);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-mozzarella-cream);
+  color: var(--color-charcoal);
+  transform: scale(1.05);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Dark section variant */
+.section--dark .btn-secondary {
+  color: var(--color-mozzarella-cream);
+  border-color: var(--color-mozzarella-cream);
+}
+
+/* Light section variant */
+.section:not(.section--dark) .btn-secondary {
+  color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+}
+
+.section:not(.section--dark) .btn-secondary:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-flour-white);
+}
+
+/* Hero section is dark but doesn't use .section--dark — 
+   needs .section.hero to beat .section:not(.section--dark) specificity */
+.section.hero .btn-secondary {
+  color: var(--color-mozzarella-cream);
+  border-color: var(--color-mozzarella-cream);
+}
+
+.section.hero .btn-secondary:hover {
+  background-color: var(--color-mozzarella-cream);
+  color: var(--color-charcoal);
+}
+
+/* ---- NEON: Glowing Border ---- */
+
+.btn-neon {
+  background-color: transparent;
+  color: var(--color-neon-pink);
+  border: var(--border-medium) var(--color-neon-pink);
+  box-shadow: var(--shadow-neon-pink);
+}
+
+.btn-neon:hover {
+  background-color: var(--color-neon-pink);
+  color: var(--color-charcoal);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 107, 157, 0.6),
+              0 0 30px rgba(255, 107, 157, 0.4),
+              0 0 60px rgba(255, 107, 157, 0.2);
+}
+
+.btn-neon--cyan {
+  color: var(--color-neon-cyan);
+  border-color: var(--color-neon-cyan);
+  box-shadow: var(--shadow-neon-cyan);
+}
+
+.btn-neon--cyan:hover {
+  background-color: var(--color-neon-cyan);
+  color: var(--color-charcoal);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.6),
+              0 0 30px rgba(0, 229, 255, 0.4),
+              0 0 60px rgba(0, 229, 255, 0.2);
+}
+
+/* ---- BUTTON GROUP ---- */
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* ---- DISABLED STATE ---- */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn:disabled:hover,
+.btn[aria-disabled="true"]:hover {
+  transform: none;
+}

@@ -1,0 +1,42 @@
+{
+  "tagline": "Thanks for dining with us.",
+  "copyright": "© 2025 Pizza Script. Cooked with ❤️ and JavaScript.",
+  "social_label": "Follow the Chef:",
+  "social_links": [
+    {
+      "platform": "GitHub",
+      "url": "#",
+      "label": "Check out the Chef's code kitchen",
+      "icon": "github"
+    },
+    {
+      "platform": "Twitter",
+      "url": "#",
+      "label": "Daily specials and hot takes",
+      "icon": "twitter"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "#",
+      "label": "The professional menu",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Dribbble",
+      "url": "#",
+      "label": "Visual tasting menu",
+      "icon": "dribbble"
+    }
+  ],
+  "easter_egg": {
+    "text": "💸 Tip your developer",
+    "url": "#",
+    "aria_label": "Support the chef with a tip on Buy Me a Coffee"
+  },
+  "receipt_items": [
+    { "label": "Subtotal", "value": "One amazing website" },
+    { "label": "Tax", "value": "Zero hidden fees" },
+    { "label": "Tip", "value": "Appreciated but optional" },
+    { "label": "Total", "value": "A happy client" }
+  ]
+}

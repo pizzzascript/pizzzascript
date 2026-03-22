@@ -1,0 +1,125 @@
+/* ============================================
+   🍕 PIZZA SCRIPT — Section Dividers
+   Decorative separators between sections.
+   ============================================ */
+
+/* ---- TORN PAPER EDGE ---- */
+
+.divider-torn {
+  background-color: transparent;
+  position: relative;
+}
+
+.divider-torn::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: inherit;
+  clip-path: polygon(
+    0% 0%, 5% 60%, 10% 20%, 15% 70%, 20% 30%, 25% 65%,
+    30% 15%, 35% 55%, 40% 25%, 45% 70%, 50% 10%, 55% 60%,
+    60% 20%, 65% 65%, 70% 30%, 75% 55%, 80% 10%, 85% 65%,
+    90% 25%, 95% 55%, 100% 0%, 100% 100%, 0% 100%
+  );
+  background-color: var(--color-bg-primary);
+}
+
+.divider-torn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  clip-path: polygon(
+    0% 100%, 5% 40%, 10% 80%, 15% 30%, 20% 70%, 25% 35%,
+    30% 85%, 35% 45%, 40% 75%, 45% 30%, 50% 90%, 55% 40%,
+    60% 80%, 65% 35%, 70% 70%, 75% 45%, 80% 90%, 85% 35%,
+    90% 75%, 95% 45%, 100% 100%, 100% 0%, 0% 0%
+  );
+  background-color: var(--color-bg-primary);
+}
+
+/* ---- DOTTED LINE ---- */
+
+.divider-dotted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider-dotted::before,
+.divider-dotted::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-crust-brown) 0px,
+    var(--color-crust-brown) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  opacity: 0.4;
+}
+
+.divider-dotted-icon {
+  font-size: var(--text-xl);
+  margin: 0 var(--space-lg);
+  color: var(--color-crust-brown);
+  opacity: 0.6;
+}
+
+/* ---- STEAM RISING ---- */
+
+.divider-steam {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: visible;
+}
+
+.steam-particle {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 245, 225, 0.6) 0%,
+    rgba(255, 245, 225, 0) 70%
+  );
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .steam-particle {
+    animation: steamRise 3s ease-out infinite;
+  }
+
+  .steam-particle:nth-child(1) { left: 35%; animation-delay: 0s; }
+  .steam-particle:nth-child(2) { left: 45%; animation-delay: 0.5s; }
+  .steam-particle:nth-child(3) { left: 55%; animation-delay: 1s; }
+  .steam-particle:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+  .steam-particle:nth-child(5) { left: 50%; animation-delay: 2s; }
+  .steam-particle:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+
+  @keyframes steamRise {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(1);
+    }
+    20% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-60px) scale(2.5) translateX(10px);
+    }
+  }
+}

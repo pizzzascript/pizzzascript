@@ -1,0 +1,22 @@
+{
+  "headline": "Pizza Script",
+  "subheadline": "Hand-crafted websites. Zero preservatives. 100% organic code.",
+  "typewriter_lines": [
+    "> cooking_website.exe",
+    "> importing_ingredients...",
+    "> preheating_the_oven...",
+    "> website_is_ready! 🍕"
+  ],
+  "cta_primary": {
+    "text": "🔥 See the Menu",
+    "anchor": "#specials",
+    "aria_label": "View our web development services"
+  },
+  "cta_secondary": {
+    "text": "📞 Place an Order",
+    "anchor": "#order",
+    "aria_label": "Go to the contact form to start your project"
+  },
+  "loading_text": "Preheating the oven...",
+  "tagline": "Where every website is made from scratch."
+}

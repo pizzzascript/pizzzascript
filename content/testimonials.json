@@ -1,0 +1,34 @@
+{
+  "section_title": "Happy Customers",
+  "section_subtitle": "Don't take our word for it. Read the reviews.",
+  "reviews": [
+    {
+      "text": "I came in expecting a basic website and left with a five-star dining experience. The attention to detail, the animations, the performance — everything was cooked to perfection.",
+      "author": "Sarah Mitchell",
+      "role": "Founder, NovaBrew Coffee",
+      "rating": 5,
+      "date": "March 2025"
+    },
+    {
+      "text": "Working with Pizza Script felt like having a personal chef for my digital presence. They took our messy brief and turned it into something clean, elegant, and exactly what we needed.",
+      "author": "James Nakamura",
+      "role": "Creative Director, Arcadia Studio",
+      "rating": 5,
+      "date": "January 2025"
+    },
+    {
+      "text": "Fast delivery, clean code, and they actually listened to feedback. Most developers just nod and do their own thing. This one genuinely cares about the recipe.",
+      "author": "Priya Sharma",
+      "role": "CTO, FitPulse",
+      "rating": 4,
+      "date": "November 2024"
+    },
+    {
+      "text": "Our website went from a sad frozen pizza to a wood-fired masterpiece. Sales are up 40% since launch. Best money we ever spent on our digital storefront.",
+      "author": "Emily Chen",
+      "role": "Owner, Willow & Sage",
+      "rating": 5,
+      "date": "February 2025"
+    }
+  ]
+}

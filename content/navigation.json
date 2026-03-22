@@ -1,0 +1,39 @@
+{
+  "logo_text": "Pizza Script",
+  "logo_emoji": "🍕",
+  "logo_tagline": "Made from Scratch",
+  "nav_items": [
+    {
+      "label": "Specials",
+      "anchor": "#specials",
+      "aria_label": "View our web development services"
+    },
+    {
+      "label": "Pantry",
+      "anchor": "#pantry",
+      "aria_label": "See our skills and technologies"
+    },
+    {
+      "label": "Recipe",
+      "anchor": "#recipe",
+      "aria_label": "Learn about our development process"
+    },
+    {
+      "label": "Chef's Specials",
+      "anchor": "#chef-specials",
+      "aria_label": "Browse our portfolio of completed projects"
+    },
+    {
+      "label": "Reviews",
+      "anchor": "#reviews",
+      "aria_label": "Read what our clients say"
+    }
+  ],
+  "cta": {
+    "text": "🔥 Hire Me",
+    "anchor": "#order",
+    "aria_label": "Go to the contact form to hire me"
+  },
+  "mobile_menu_aria": "Toggle mobile navigation menu",
+  "scroll_to_top_aria": "Scroll back to the top of the page"
+}
