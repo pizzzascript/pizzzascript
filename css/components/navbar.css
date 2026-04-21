@@ -59,8 +59,19 @@
   text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
 }
 
-.navbar-logo .logo-emoji {
-  margin-right: var(--space-xs);
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.navbar-logo .logo-lottie {
+  flex-shrink: 0;
+  display: block;
+}
+
+.navbar-logo .logo-text {
+  line-height: 1;
 }
 
 /* ---- DESKTOP NAV LINKS ---- */

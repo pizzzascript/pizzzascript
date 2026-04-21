@@ -14,13 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('preloader');
   const preloaderFill = document.getElementById('preloader-fill');
 
-  // Animate preloader bar
-  if (preloaderFill) {
-    setTimeout(() => { preloaderFill.style.width = '30%'; }, 100);
-    setTimeout(() => { preloaderFill.style.width = '60%'; }, 300);
-    setTimeout(() => { preloaderFill.style.width = '90%'; }, 600);
-  }
-
   function hidePreloader() {
     if (preloaderFill) preloaderFill.style.width = '100%';
 
@@ -36,17 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 300);
   }
 
-  // Hide preloader when page is fully loaded
-  if (document.readyState === 'complete') {
-    hidePreloader();
-  } else {
-    window.addEventListener('load', hidePreloader);
+  // Fill bar smoothly over the animation duration
+  if (preloaderFill) {
+    setTimeout(() => { preloaderFill.style.width = '40%'; }, 300);
+    setTimeout(() => { preloaderFill.style.width = '75%'; }, 1000);
+    setTimeout(() => { preloaderFill.style.width = '95%'; }, 2000);
   }
 
-  // Force-hide after 3 seconds in case of slow assets
+  // Hide when Lottie animation completes one play
+  const lottie = document.getElementById('preloader-lottie');
+  if (lottie) {
+    lottie.addEventListener('complete', hidePreloader, { once: true });
+  }
+
+  // Force-hide after 5 seconds as fallback
   setTimeout(() => {
     if (preloader && !preloader.classList.contains('fade-out')) {
       hidePreloader();
     }
-  }, 3000);
+  }, 5000);
 });

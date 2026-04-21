@@ -107,3 +107,14 @@ function initNav() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+// Play navbar logo animation on hover
+const navLottie = document.getElementById('nav-lottie');
+if (navLottie) {
+  navLottie.addEventListener('mouseenter', () => {
+    navLottie.seek(0);
+    navLottie.play();
+  });
+  navLottie.addEventListener('mouseleave', () => {
+    navLottie.stop();
+  });
+}
