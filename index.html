@@ -113,7 +113,11 @@
     <!-- ====== SECTION 1: THE KITCHEN (Hero) ====== -->
     <section id="kitchen" class="hero-scroll-driver">
       <div class="hero-sticky">
+        <!-- Desktop Canvas -->
         <canvas id="hero-canvas"></canvas>
+        
+        <!-- Mobile Lottie Animation -->
+        <dotlottie-wc id="hero-mobile-lottie" src="https://lottie.host/49f60f16-debb-493c-a4bc-1258f13364dd/C2htAvbd93.lottie" autoplay></dotlottie-wc>
 
         <!-- Mobile Hero Content (visible only on mobile, below canvas) -->
         <div class="hero-mobile-overlay">
@@ -711,6 +715,7 @@
   <button id="back-to-top" aria-label="Scroll back to the top of the page">🍕</button>
 
   <!-- ====== SCRIPTS ====== -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
   <script src="js/utils.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>

@@ -47,6 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentImageIndex = 0;
 
   function render() {
+    // Dynamically abort and clear on mobile
+    if (window.innerWidth <= 768) {
+      if (canvas.style.display !== 'none') canvas.style.display = 'none';
+      return;
+    } else {
+      if (canvas.style.display === 'none') {
+        canvas.style.display = 'block';
+        setCanvasSize();
+      }
+    }
+
     if (!images[currentImageIndex]) return;
     const img = images[currentImageIndex];
     if (img.complete && img.naturalWidth > 0) {
@@ -62,13 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('resize', () => {
-    requestAnimationFrame(setCanvasSize);
+    if (window.innerWidth > 768) {
+      requestAnimationFrame(setCanvasSize);
+    } else {
+      canvas.style.display = 'none';
+    }
   });
 
   /* ============================================
      Scroll-driven animation (both desktop & mobile)
      ============================================ */
   window.addEventListener('scroll', () => {
+    if (window.innerWidth <= 768) return; // Completely disable scroll functionality on mobile
+
     const rect = heroSection.getBoundingClientRect();
     const maxScroll = heroSection.offsetHeight - window.innerHeight;
     if (maxScroll <= 0) return;
