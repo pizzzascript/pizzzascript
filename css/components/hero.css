@@ -1,10 +1,11 @@
 /* ============================================
    🍕 PIZZA SCRIPT — Hero / Kitchen Section
    Full-viewport landing with dark kitchen 
-   aesthetic. Scroll-driven on all views.
+   aesthetic. Scroll-driven on desktop,
+   Lottie animation on mobile.
    ============================================ */
 
-/* ---- CANVAS (always full viewport, both desktop & mobile) ---- */
+/* ---- CANVAS (desktop only) ---- */
 
 #hero-canvas {
   position: absolute;
@@ -15,7 +16,15 @@
   z-index: 1;
 }
 
+/* ---- LOTTIE (mobile only — hidden by default) ---- */
+
 #hero-mobile-lottie {
+  display: none;
+}
+
+/* ---- MOBILE OVERLAY (hidden by default on desktop) ---- */
+
+.hero-mobile-overlay {
   display: none;
 }
 
@@ -73,35 +82,34 @@
 }
 
 /* ============================================
-   MOBILE: Shorter scroll, content overlay at bottom
+   MOBILE — Pure CSS display swap
    ============================================ */
 
 @media (max-width: 768px) {
+
+  /* ---- Kill scroll trap: no sticky, no tall driver ---- */
   .hero-scroll-driver {
     height: auto;
-    min-height: 100dvh;
   }
 
   .hero-sticky {
     position: relative;
     height: auto;
-    min-height: 100dvh;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
     overflow: visible;
   }
 
+  /* ---- Hide canvas completely ---- */
   #hero-canvas {
-    display: none;
+    display: none !important;
   }
 
-  /* Lottie animation takes top portion on mobile - reset absolute positioning */
+  /* ---- Show Lottie (with background-like treatment) ---- */
   #hero-mobile-lottie {
     display: block;
     position: relative;
-    top: auto;
-    left: auto;
     width: 100%;
     height: 45vh;
     min-height: 200px;
@@ -110,42 +118,72 @@
     background-color: var(--color-bg-dark);
   }
 
-  /* Remove noise on mobile for perf */
-  .hero-sticky::after {
-    display: none;
+  /* Dark vignette overlay on the Lottie — makes it feel recessed/background-like */
+  .hero-sticky::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45vh;
+    min-height: 200px;
+    background:
+      /* Top edge fade */
+      linear-gradient(180deg, rgba(26, 15, 10, 0.5) 0%, transparent 25%),
+      /* Side vignette */
+      radial-gradient(ellipse at center, transparent 40%, rgba(26, 15, 10, 0.45) 100%),
+      /* Bottom strong fade into the brown content area */
+      linear-gradient(180deg, transparent 50%, rgba(44, 24, 16, 0.85) 85%, var(--color-counter-brown) 100%);
+    pointer-events: none;
+    z-index: 2;
+    inset: auto;
   }
 
+  /* ---- Show mobile overlay ---- */
   .hero-mobile-overlay {
+    display: flex;
     position: relative;
     z-index: 5;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
     min-height: 0;
     background-color: var(--color-counter-brown);
-    padding-top: var(--space-sm);
+    padding-top: var(--space-md);
     padding-bottom: var(--space-2xl);
   }
 
-  /* Gradient fade dynamically anchored to the top of the text section, blending UP over the canvas */
+  /* Extra gradient fade blending up over the Lottie edge */
   .hero-mobile-overlay::before {
     content: '';
     position: absolute;
     bottom: 100%;
     left: 0;
     right: 0;
-    height: 15vh;
+    height: 20vh;
     background: linear-gradient(
       180deg,
       rgba(44, 24, 16, 0) 0%,
-      rgba(44, 24, 16, 0.75) 75%,
+      rgba(44, 24, 16, 0.6) 60%,
       var(--color-counter-brown) 100%
     );
     pointer-events: none;
     z-index: 10;
   }
+
+  /* Remove desktop overlays on mobile */
+  .hero-sticky::before {
+    display: none;
+  }
+
+  .hero-sticky::after {
+    display: none;
+  }
 }
+
+/* ============================================
+   MOBILE HERO CONTENT
+   ============================================ */
 
 .hero-mobile-content {
   text-align: center;
