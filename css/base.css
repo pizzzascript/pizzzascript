@@ -12,6 +12,12 @@ body {
   overflow-x: clip;
 }
 
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
 body.mobile-menu-open {
   overflow: hidden;
 }
