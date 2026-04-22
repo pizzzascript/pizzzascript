@@ -6,9 +6,43 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all modules
   initNav();
-  initTypewriter();
   initAnimations();
   initForm();
+
+  // ---- Initialize Lottie Animations ----
+  // Animation data is loaded via <script> tag as a global variable
+  // (avoids fetch/XHR which Chrome blocks on file:// protocol)
+  if (typeof lottie !== 'undefined' && typeof pizzaGlitchAnimationData !== 'undefined') {
+    // Preloader animation
+    const preloaderContainer = document.getElementById('preloader-lottie');
+    if (preloaderContainer) {
+      lottie.loadAnimation({
+        container: preloaderContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: pizzaGlitchAnimationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      });
+    }
+
+    // Navbar logo animation
+    const navContainer = document.getElementById('nav-lottie');
+    if (navContainer) {
+      lottie.loadAnimation({
+        container: navContainer,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: pizzaGlitchAnimationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      });
+    }
+  }
 
   // ---- Preloader ----
   const preloader = document.getElementById('preloader');
@@ -31,18 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fill bar smoothly over the animation duration
   if (preloaderFill) {
-    setTimeout(() => { preloaderFill.style.width = '40%'; }, 300);
-    setTimeout(() => { preloaderFill.style.width = '75%'; }, 1000);
-    setTimeout(() => { preloaderFill.style.width = '95%'; }, 2000);
+    setTimeout(() => { preloaderFill.style.width = '40%'; }, 800);
+    setTimeout(() => { preloaderFill.style.width = '75%'; }, 2500);
+    setTimeout(() => { preloaderFill.style.width = '95%'; }, 4500);
   }
 
-  // Hide when Lottie animation completes one play
-  const lottie = document.getElementById('preloader-lottie');
-  if (lottie) {
-    lottie.addEventListener('complete', hidePreloader, { once: true });
-  }
-
-  // Force-hide after 5 seconds as fallback
+  // Preloader stays on screen for exactly 5 seconds, whilst the lottie continuously loops
   setTimeout(() => {
     if (preloader && !preloader.classList.contains('fade-out')) {
       hidePreloader();

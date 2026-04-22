@@ -15,7 +15,7 @@
   /* ---- ACCENT COLORS ---- */
   --color-neon-pink:        #FF6B9D;
   --color-neon-cyan:        #00E5FF;
-  --color-pepperoni-orange: #E67E22;
+  --color-pepperoni-orange: #FFEA00;
   --color-parchment:        #F5E6C8;
 
   /* ---- NEUTRALS ---- */
@@ -26,21 +26,21 @@
   --color-light-smoke:      #B8A99E;
 
   /* ---- SEMANTIC COLORS ---- */
-  --color-bg-primary:       var(--color-mozzarella-cream);
-  --color-bg-dark:          var(--color-counter-brown);
-  --color-bg-card:          var(--color-parchment);
-  --color-text-primary:     var(--color-charcoal);
-  --color-text-light:       var(--color-flour-white);
-  --color-text-muted:       var(--color-smoke);
-  --color-accent:           var(--color-marinara-red);
-  --color-success:          var(--color-basil-green);
-  --color-warning:          var(--color-pepperoni-orange);
+  --color-bg-primary:       #0A0A0A; /* Arcade cabinet black */
+  --color-bg-dark:          #05020A; /* Dark neon void */
+  --color-bg-card:          #151515; /* Off-black for cards */
+  --color-text-primary:     #0DF205; /* Matrix terminal green */
+  --color-text-light:       #FFFFFF; /* White */
+  --color-text-muted:       #888888; /* Glitch gray */
+  --color-accent:           var(--color-neon-cyan); /* Cyberpunk cyan */
+  --color-success:          var(--color-neon-pink); /* Fast pink */
+  --color-warning:          #FFEA00; /* Arcade yellow */
 
   /* ---- TYPOGRAPHY ---- */
-  --font-display:   'Pacifico', cursive;
+  --font-display:   'Press Start 2P', monospace;
   --font-heading:   'Press Start 2P', monospace;
   --font-body:      'Space Mono', monospace;
-  --font-accent:    'Caveat', cursive;
+  --font-accent:    'Space Mono', monospace;
 
   --text-xs:    0.75rem;    /* 12px */
   --text-sm:    0.875rem;   /* 14px */

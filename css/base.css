@@ -9,7 +9,7 @@ body {
   font-size: var(--text-base);
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.mobile-menu-open {

@@ -25,8 +25,13 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
 
-  <!-- Lottie Animation Script -->
-  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
+  <!-- Preconnect & Preload for immediate Preloader display -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" as="script" crossorigin="anonymous">
+
+  <!-- Lottie Animation Library + Data (loaded via script tag to avoid file:// protocol CORS issues) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="assets/animations/pizza-glitch-animation-data.js"></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +64,8 @@
 
   <!-- ====== PRELOADER ====== -->
   <div id="preloader" role="status" aria-label="Loading">
-    <dotlottie-wc id="preloader-lottie" src="https://lottie.host/1a66d6ce-c7c0-434f-ac58-9c15546c3e4e/ftiK07vCsK.lottie" autoplay speed="0.4" style="width:280px;height:280px"></dotlottie-wc>
+    <div id="preloader-lottie" style="width:280px;height:280px"></div>
+    <div class="preloader-text">PIZZA SCRIPT</div>
     <div class="preloader-bar">
       <div class="preloader-bar-fill" id="preloader-fill"></div>
     </div>
@@ -72,16 +78,16 @@
   <header class="navbar" id="navbar" role="banner">
     <div class="navbar-inner">
       <a href="#kitchen" class="navbar-logo" aria-label="Pizza Script — Back to top">
-        <dotlottie-wc id="nav-lottie" src="https://lottie.host/1a66d6ce-c7c0-434f-ac58-9c15546c3e4e/ftiK07vCsK.lottie" class="logo-lottie" style="width:56px;height:56px"></dotlottie-wc><span class="logo-text">Pizza Script</span>
+        <div id="nav-lottie" class="logo-lottie" style="width:56px;height:56px"></div><span class="logo-text">Pizza Script</span>
       </a>
 
       <nav class="navbar-links" role="navigation" aria-label="Main navigation">
-        <a href="#specials" class="navbar-link" data-section="specials">Specials</a>
-        <a href="#pantry" class="navbar-link" data-section="pantry">Pantry</a>
-        <a href="#recipe" class="navbar-link" data-section="recipe">Recipe</a>
-        <a href="#chef-specials" class="navbar-link" data-section="chef-specials">Chef's Specials</a>
-        <a href="#reviews" class="navbar-link" data-section="reviews">Reviews</a>
-        <a href="#order" class="btn btn-neon navbar-cta" aria-label="Go to the contact form to hire me">🔥 Hire Me</a>
+        <a href="#specials" class="navbar-link" data-section="specials">Modules</a>
+        <a href="#pantry" class="navbar-link" data-section="pantry">Mainframe</a>
+        <a href="#recipe" class="navbar-link" data-section="recipe">Deployment</a>
+        <a href="#chef-specials" class="navbar-link" data-section="chef-specials">Case Studies</a>
+        <a href="#reviews" class="navbar-link" data-section="reviews">User Logs</a>
+        <a href="#order" class="btn btn-neon navbar-cta" aria-label="Go to the contact form to hire me">⚡ Initialize</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -93,47 +99,42 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-      <a href="#specials" class="mobile-menu-link">Specials</a>
-      <a href="#pantry" class="mobile-menu-link">Pantry</a>
-      <a href="#recipe" class="mobile-menu-link">Recipe</a>
-      <a href="#chef-specials" class="mobile-menu-link">Chef's Specials</a>
-      <a href="#reviews" class="mobile-menu-link">Reviews</a>
-      <a href="#order" class="btn btn-primary">🔥 Hire Me</a>
+      <a href="#specials" class="mobile-menu-link">Modules</a>
+      <a href="#pantry" class="mobile-menu-link">Mainframe</a>
+      <a href="#recipe" class="mobile-menu-link">Deployment</a>
+      <a href="#chef-specials" class="mobile-menu-link">Case Studies</a>
+      <a href="#reviews" class="mobile-menu-link">User Logs</a>
+      <a href="#order" class="btn btn-primary">⚡ Initialize</a>
     </div>
   </header>
 
   <main>
 
     <!-- ====== SECTION 1: THE KITCHEN (Hero) ====== -->
-    <section id="kitchen" class="section hero">
-      <div class="hero-content">
-        <h1 class="hero-logo neon-text neon-flicker--slow">Pizza Script</h1>
-        <p class="hero-tagline">Hand-crafted websites. Zero preservatives. 100% organic code.</p>
+    <section id="kitchen" class="hero-scroll-driver">
+      <div class="hero-sticky">
+        <canvas id="hero-canvas"></canvas>
 
-        <div class="typewriter-container" aria-label="Terminal animation showing website cooking process">
-          <div class="typewriter-header">
-            <span class="typewriter-dot typewriter-dot--red"></span>
-            <span class="typewriter-dot typewriter-dot--yellow"></span>
-            <span class="typewriter-dot typewriter-dot--green"></span>
-            <span class="typewriter-title">pizza-kitchen ~ $</span>
-          </div>
-          <div id="typewriter-output">
-            <div class="typewriter-line" data-text="> cooking_website.exe"></div>
-            <div class="typewriter-line" data-text="> importing_ingredients..."></div>
-            <div class="typewriter-line" data-text="> preheating_the_oven..."></div>
-            <div class="typewriter-line" data-text="> website_is_ready! 🍕"></div>
+        <!-- Mobile Hero Content (visible only on mobile, below canvas) -->
+        <div class="hero-mobile-overlay">
+          <div class="hero-mobile-content">
+            <h1 class="hero-mobile-title">
+              <span class="hero-title-line hero-title-pizza">PIZZA</span>
+              <span class="hero-title-line hero-title-script">SCRIPT</span>
+            </h1>
+            <p class="hero-mobile-tagline">Hand-crafted websites,<br>made from scratch.</p>
+            <div class="hero-mobile-ctas">
+              <a href="#specials" class="btn btn-neon hero-mobile-btn">🍕 View Menu</a>
+              <a href="#order" class="btn btn-primary hero-mobile-btn">⚡ Place Order</a>
+            </div>
+
           </div>
         </div>
 
-        <div class="btn-group hero-ctas" id="hero-ctas">
-          <a href="#specials" class="btn btn-primary" aria-label="View our web development services">🔥 See the Menu</a>
-          <a href="#order" class="btn btn-secondary" aria-label="Go to the contact form to start your project">📞 Place an Order</a>
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>Scroll to explore</span>
+          <span class="scroll-arrow">↓</span>
         </div>
-      </div>
-
-      <div class="hero-scroll-hint" aria-hidden="true">
-        <span>Scroll to explore</span>
-        <span class="scroll-arrow">↓</span>
       </div>
     </section>
 
@@ -712,9 +713,9 @@
   <!-- ====== SCRIPTS ====== -->
   <script src="js/utils.js" defer></script>
   <script src="js/nav.js" defer></script>
-  <script src="js/typewriter.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/form.js" defer></script>
+  <script src="js/hero-animation.js" defer></script>
   <script src="js/main.js" defer></script>
 
 </body>

@@ -1,31 +1,266 @@
 /* ============================================
    🍕 PIZZA SCRIPT — Hero / Kitchen Section
    Full-viewport landing with dark kitchen 
-   aesthetic and typewriter terminal.
+   aesthetic. Scroll-driven on all views.
    ============================================ */
 
-.hero {
+/* ---- CANVAS (always full viewport, both desktop & mobile) ---- */
+
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ---- SCROLL DRIVER (tall container for scroll animation) ---- */
+
+.hero-scroll-driver {
+  height: 400vh;
   position: relative;
   background-color: var(--color-counter-brown);
-  background-image:
-    radial-gradient(ellipse at 50% 120%, rgba(192, 57, 43, 0.15) 0%, transparent 60%),
-    linear-gradient(180deg, var(--color-counter-brown) 0%, #1a0f0a 100%);
+}
+
+/* ---- STICKY VIEWPORT ---- */
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-.hero::before {
+/* ============================================
+   DESKTOP overlays
+   ============================================ */
+
+/* Ambient light + bottom gradient (inside sticky, never scrolls) */
+.hero-sticky::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/textures/noise.svg');
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(192, 57, 43, 0.15) 0%, transparent 60%),
+    linear-gradient(180deg,
+      rgba(26, 15, 10, 0.0) 0%,
+      rgba(26, 15, 10, 0.0) 85%,
+      rgba(44, 24, 16, 0.8) 95%,
+      var(--color-counter-brown) 100%
+    );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Noise texture */
+.hero-sticky::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/images/textures/noise.svg');
   opacity: 0.04;
   pointer-events: none;
-  z-index: var(--z-above);
+  z-index: 4;
 }
+
+/* ============================================
+   MOBILE: Shorter scroll, content overlay at bottom
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero-scroll-driver {
+    height: 250vh;
+  }
+
+  .hero-sticky {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  /* Canvas takes top portion on mobile - reset absolute positioning */
+  #hero-canvas {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 45vh;
+    min-height: 200px;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  /* Remove noise on mobile for perf */
+  .hero-sticky::after {
+    display: none;
+  }
+
+  .hero-mobile-overlay {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+    background-color: var(--color-counter-brown);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Gradient fade dynamically anchored to the top of the text section, blending UP over the canvas */
+  .hero-mobile-overlay::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 15vh;
+    background: linear-gradient(
+      180deg,
+      rgba(44, 24, 16, 0) 0%,
+      rgba(44, 24, 16, 0.75) 75%,
+      var(--color-counter-brown) 100%
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+.hero-mobile-content {
+  text-align: center;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+/* ---- MOBILE HERO TITLE ---- */
+
+.hero-mobile-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-title-line {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-wider);
+  line-height: 1.1;
+  display: block;
+}
+
+.hero-title-pizza {
+  font-size: 2.6rem;
+  color: var(--color-mozzarella-cream);
+  text-shadow:
+    0 0 20px rgba(255, 107, 157, 0.4),
+    0 0 40px rgba(255, 107, 157, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-title-script {
+  font-size: 1.4rem;
+  color: var(--color-neon-pink);
+  text-shadow:
+    0 0 15px rgba(255, 107, 157, 0.6),
+    0 0 30px rgba(255, 107, 157, 0.3),
+    0 0 60px rgba(255, 107, 157, 0.15);
+  animation: neonFlicker 4s ease-in-out infinite;
+}
+
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.7; }
+  94% { opacity: 1; }
+  96% { opacity: 0.85; }
+  97% { opacity: 1; }
+}
+
+/* ---- MOBILE HERO TAGLINE ---- */
+
+.hero-mobile-tagline {
+  font-family: var(--font-accent);
+  font-size: var(--text-sm);
+  color: var(--color-light-smoke);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- MOBILE HERO CTAs ---- */
+
+.hero-mobile-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.hero-mobile-btn {
+  width: 200px;
+  text-align: center;
+  font-size: var(--text-xs) !important;
+  padding: 12px 20px !important;
+}
+
+/* ---- MOBILE HERO STATS ---- */
+
+.hero-mobile-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero-stat-number {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  color: var(--color-neon-cyan);
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+.hero-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  color: var(--color-smoke);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 107, 157, 0.4),
+    transparent
+  );
+}
+
+/* ============================================
+   EXISTING DESKTOP HERO CONTENT
+   ============================================ */
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   max-width: 800px;
   padding: var(--space-2xl) var(--space-md);
@@ -178,6 +413,13 @@
   align-items: center;
   gap: var(--space-sm);
   opacity: 0.6;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero-scroll-hint {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
