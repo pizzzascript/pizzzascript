@@ -56,6 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         preloader.classList.add('fade-out');
         document.body.classList.remove('loading');
 
+        // ---- Start mobile hero video at 0.8× speed after preloader fades ----
+        const heroVideo = document.getElementById('hero-mobile-lottie');
+        if (heroVideo && window.innerWidth <= 768) {
+          heroVideo.playbackRate = 0.8;
+          heroVideo.play().catch(() => {/* autoplay policy guard */});
+        }
+
         setTimeout(() => {
           preloader.remove();
         }, 500);
