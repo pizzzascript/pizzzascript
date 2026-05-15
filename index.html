@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta -->
   <title>Pizza Script - Hand-Crafted Websites, Made from Scratch</title>
-  <meta name="description" content="Freelance web developer serving custom-built websites, web apps, and UI/UX design. Like a great pizza, every project is made from scratch with fresh ingredients and zero shortcuts.">
-  <meta name="keywords" content="freelance web developer, portfolio, web design, frontend developer, custom websites, landing pages, web applications, UI UX design, React developer, JavaScript developer">
+  <meta name="description"
+    content="Freelance web developer serving custom-built websites, web apps, and UI/UX design. Like a great pizza, every project is made from scratch with fresh ingredients and zero shortcuts.">
+  <meta name="keywords"
+    content="freelance web developer, portfolio, web design, frontend developer, custom websites, landing pages, web applications, UI UX design, React developer, JavaScript developer">
   <meta name="author" content="Pizza Script">
   <meta name="theme-color" content="#C0392B">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="🍕 Pizza Script - Hand-Crafted Websites, Made from Scratch">
-  <meta property="og:description" content="Freelance web developer cooking up custom websites, apps, and designs. Fresh ingredients, zero preservatives, 100% organic code.">
+  <meta property="og:description"
+    content="Freelance web developer cooking up custom websites, apps, and designs. Fresh ingredients, zero preservatives, 100% organic code.">
   <meta property="og:url" content="https://pizzascript.dev">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="🍕 Pizza Script — Websites Made from Scratch">
-  <meta name="twitter:description" content="Freelance web dev serving hand-crafted websites. No frozen templates. No preservatives.">
+  <meta name="twitter:description"
+    content="Freelance web dev serving hand-crafted websites. No frozen templates. No preservatives.">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
 
   <!-- Preconnect & Preload for immediate Preloader display -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" as="script"
+    crossorigin="anonymous">
 
   <!-- Lottie Animation Library + Data (loaded via script tag to avoid file:// protocol CORS issues) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
@@ -36,27 +42,14 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Pacifico&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Pacifico&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/components/neon.css">
-  <link rel="stylesheet" href="css/components/buttons.css">
-  <link rel="stylesheet" href="css/components/navbar.css">
-  <link rel="stylesheet" href="css/components/dividers.css">
-  <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/menu-card.css">
-  <link rel="stylesheet" href="css/components/ingredient.css">
-  <link rel="stylesheet" href="css/components/recipe-step.css">
-  <link rel="stylesheet" href="css/components/polaroid.css">
-  <link rel="stylesheet" href="css/components/testimonial.css">
-  <link rel="stylesheet" href="css/components/contact-form.css">
-  <link rel="stylesheet" href="css/components/footer.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="loading">
 
   <!-- ====== SKIP TO CONTENT ====== -->
@@ -72,13 +65,15 @@
   </div>
 
   <!-- ====== SCROLL PROGRESS ====== -->
-  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0"
+    aria-valuemax="100"></div>
 
   <!-- ====== NAVIGATION ====== -->
   <header class="navbar" id="navbar" role="banner">
     <div class="navbar-inner">
       <a href="#kitchen" class="navbar-logo" aria-label="Pizza Script — Back to top">
-        <div id="nav-lottie" class="logo-lottie" style="width:56px;height:56px"></div><span class="logo-text">Pizza Script</span>
+        <div id="nav-lottie" class="logo-lottie" style="width:56px;height:56px"></div><span class="logo-text">Pizza
+          Script</span>
       </a>
 
       <nav class="navbar-links" role="navigation" aria-label="Main navigation">
@@ -90,7 +85,8 @@
         <a href="#order" class="btn btn-neon navbar-cta" aria-label="Go to the contact form to hire me">⚡ Initialize</a>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile navigation menu" aria-expanded="false"
+        aria-controls="mobile-menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -115,10 +111,11 @@
       <div class="hero-sticky">
         <!-- Desktop Canvas -->
         <canvas id="hero-canvas"></canvas>
-        
-        <!-- Mobile Lottie Animation -->
+
+        <!-- Mobile Hero Video -->
         <div class="hero-video-wrap">
-          <video id="hero-mobile-lottie" src="assets/videos/gemini_generated_video_86c66eb6.mp4" muted playsinline preload="auto"></video>
+          <video id="hero-mobile-lottie" src="assets/videos/gemini_generated_video_86c66eb6.mp4" muted playsinline
+            preload="auto"></video>
         </div>
 
         <!-- Mobile Hero Content (visible only on mobile, below canvas) -->
@@ -144,22 +141,12 @@
       </div>
     </section>
 
-    <!-- ====== DIVIDER: Steam ====== -->
-    <!-- <div class="divider divider-steam" aria-hidden="true">
-      <span class="steam-particle"></span>
-      <span class="steam-particle"></span>
-      <span class="steam-particle"></span>
-      <span class="steam-particle"></span>
-      <span class="steam-particle"></span>
-      <span class="steam-particle"></span>
-    </div> -->
-
     <!-- ====== SECTION 2: TODAY'S SPECIALS (Services) ====== -->
     <section id="specials" class="section section--alt">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">Today's Specials</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Pick your flavor. Every pie is custom-made to order.</p>
-
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Pick your flavor. Every pie is
+          custom-made to order.</p>
         <div class="grid grid--3">
 
           <article class="menu-card" data-animate="pop-in" data-animate-delay="1">
@@ -170,7 +157,9 @@
                 <span class="menu-card-service">Landing Page</span>
               </div>
             </div>
-             <p class="menu-card-description">Crisp, fast, and made to impress at first bite. High-converting landing pages baked for performance, clear messaging, and irresistible calls to action.</p>            <div class="menu-card-ingredients" aria-label="Technologies used">
+            <p class="menu-card-description">Crisp, fast, and made to impress at first bite. High-converting landing
+              pages baked for performance, clear messaging, and irresistible calls to action.</p>
+            <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">HTML</span>
               <span class="menu-card-ingredient">CSS</span>
               <span class="menu-card-ingredient">JS</span>
@@ -189,7 +178,8 @@
                 <span class="menu-card-service">Full Website</span>
               </div>
             </div>
-            <p class="menu-card-description">Loaded with premium toppings. Multi-page business websites layered with responsive design, smooth UX, SEO seasoning, and performance straight from the oven.The crowd-pleaser.</p>
+            <p class="menu-card-description">Loaded with premium toppings. Multi-page business websites layered with
+              responsive design, smooth UX, SEO seasoning, and performance straight from the oven.The crowd-pleaser.</p>
             <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">React</span>
               <span class="menu-card-ingredient">Next.js</span>
@@ -210,7 +200,9 @@
                 <span class="menu-card-service">Web Application</span>
               </div>
             </div>
-            <p class="menu-card-description">Rich, layered, and engineered to perfection. Custom logic, dynamic interfaces, database connectivity,user authentication and interactive experiences — takes time, but it's worth every bite.</p>
+            <p class="menu-card-description">Rich, layered, and engineered to perfection. Custom logic, dynamic
+              interfaces, database connectivity,user authentication and interactive experiences — takes time, but it's
+              worth every bite.</p>
             <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">React</span>
               <span class="menu-card-ingredient">Node.js</span>
@@ -231,7 +223,8 @@
                 <span class="menu-card-service">UI/UX Design</span>
               </div>
             </div>
-            <p class="menu-card-description">Beautiful on the outside, perfectly structured inside. Wireframes, prototypes, and pixel-perfect mockups — all folded into one delicious package.</p>
+            <p class="menu-card-description">Beautiful on the outside, perfectly structured inside. Wireframes,
+              prototypes, and pixel-perfect mockups — all folded into one delicious package.</p>
             <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">Figma</span>
               <span class="menu-card-ingredient">Prototyping</span>
@@ -243,7 +236,7 @@
             </div>
           </article>
 
-           <article class="menu-card" data-animate="pop-in" data-animate-delay="4">
+          <article class="menu-card" data-animate="pop-in" data-animate-delay="4">
             <div class="menu-card-header">
               <span class="menu-card-emoji" aria-hidden="true">⭐</span>
               <div>
@@ -251,7 +244,10 @@
                 <span class="menu-card-service">SEO Optimization</span>
               </div>
             </div>
-             <p class="menu-card-description">No point baking a masterpiece if nobody finds the kitchen. On-page optimization, technical SEO fixes, and performance tuning to help your website rise in search rankings.</p>            <div class="menu-card-ingredients" aria-label="Technologies used">
+            <p class="menu-card-description">No point baking a masterpiece if nobody finds the kitchen. On-page
+              optimization, technical SEO fixes, and performance tuning to help your website rise in search rankings.
+            </p>
+            <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">On Page SEO</span>
               <span class="menu-card-ingredient">Technical SEO</span>
             </div>
@@ -269,7 +265,8 @@
                 <span class="menu-card-service">Bug Fix / Small Task</span>
               </div>
             </div>
-            <p class="menu-card-description">Quick, affordable, no-fuss. Got a bug? Need a tweak? A single slice is all you need. Fast turnaround, no minimum order.</p>
+            <p class="menu-card-description">Quick, affordable, no-fuss. Got a bug? Need a tweak? A single slice is all
+              you need. Fast turnaround, no minimum order.</p>
             <div class="menu-card-ingredients" aria-label="Technologies used">
               <span class="menu-card-ingredient">Debugging</span>
               <span class="menu-card-ingredient">CSS Fixes</span>
@@ -292,7 +289,8 @@
     <section id="pantry" class="section">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">The Pantry</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Fresh tools, clean code, and the right ingredients for every digital recipe.</p>
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Fresh tools, clean code, and the right
+          ingredients for every digital recipe.</p>
         <!-- Shelf: Base & Dough -->
         <div class="shelf" data-animate="fade-up">
           <div class="shelf-header">
@@ -301,10 +299,38 @@
             <span class="shelf-category">Core Languages</span>
           </div>
           <div class="shelf-items">
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 95%"><div class="ingredient-icon" id="icon-html"></div><div class="ingredient-info"><span class="ingredient-name">HTML</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Daily staple</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 92%"><div class="ingredient-icon" id="icon-css"></div><div class="ingredient-info"><span class="ingredient-name">CSS</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Always in stock</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 90%"><div class="ingredient-icon" id="icon-javascript"></div><div class="ingredient-info"><span class="ingredient-name">JavaScript</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Freshly ground</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 72%"><div class="ingredient-icon" id="icon-typescript"></div><div class="ingredient-info"><span class="ingredient-name">PHP</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Premium grade</span></div></div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 95%">
+              <div class="ingredient-icon" id="icon-html"></div>
+              <div class="ingredient-info"><span class="ingredient-name">HTML</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Daily staple</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 92%">
+              <div class="ingredient-icon" id="icon-css"></div>
+              <div class="ingredient-info"><span class="ingredient-name">CSS</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Always in stock</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 90%">
+              <div class="ingredient-icon" id="icon-javascript"></div>
+              <div class="ingredient-info"><span class="ingredient-name">JavaScript</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Freshly ground</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 72%">
+              <div class="ingredient-icon" id="icon-typescript"></div>
+              <div class="ingredient-info"><span class="ingredient-name">PHP</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Premium grade</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -316,10 +342,38 @@
             <span class="shelf-category">Frameworks & Libraries</span>
           </div>
           <div class="shelf-items">
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 88%"><div class="ingredient-icon" id="icon-react"></div><div class="ingredient-info"><span class="ingredient-name">React</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">House recipe</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 85%"><div class="ingredient-icon" id="icon-nextjs"></div><div class="ingredient-info"><span class="ingredient-name">Next.js</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Imported fresh</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 72%"><div class="ingredient-icon" id="icon-vue"></div><div class="ingredient-info"><span class="ingredient-name">Vue</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Seasonal pick</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 90%"><div class="ingredient-icon" id="icon-tailwind"></div><div class="ingredient-info"><span class="ingredient-name">Tailwind CSS</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Chef's favorite</span></div></div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 88%">
+              <div class="ingredient-icon" id="icon-react"></div>
+              <div class="ingredient-info"><span class="ingredient-name">React</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">House recipe</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 85%">
+              <div class="ingredient-icon" id="icon-nextjs"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Next.js</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Imported fresh</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 72%">
+              <div class="ingredient-icon" id="icon-vue"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Vue</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Seasonal pick</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 90%">
+              <div class="ingredient-icon" id="icon-tailwind"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Tailwind CSS</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Chef's favorite</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -331,10 +385,38 @@
             <span class="shelf-category">Backend & Databases</span>
           </div>
           <div class="shelf-items">
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 85%"><div class="ingredient-icon" id="icon-nodejs"></div><div class="ingredient-info"><span class="ingredient-name">Node.js</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Aged perfectly</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 70%"><div class="ingredient-icon" id="icon-python"></div><div class="ingredient-info"><span class="ingredient-name">PHP</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Farm fresh</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 80%"><div class="ingredient-icon" id="icon-express"></div><div class="ingredient-info"><span class="ingredient-name">SQL</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Reliable classic</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 78%"><div class="ingredient-icon" id="icon-firebase"></div><div class="ingredient-info"><span class="ingredient-name">Firebase</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Quick-melt</span></div></div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 85%">
+              <div class="ingredient-icon" id="icon-nodejs"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Node.js</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Aged perfectly</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 70%">
+              <div class="ingredient-icon" id="icon-python"></div>
+              <div class="ingredient-info"><span class="ingredient-name">PHP</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Farm fresh</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 80%">
+              <div class="ingredient-icon" id="icon-express"></div>
+              <div class="ingredient-info"><span class="ingredient-name">SQL</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Reliable classic</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 78%">
+              <div class="ingredient-icon" id="icon-firebase"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Firebase</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Quick-melt</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -346,10 +428,38 @@
             <span class="shelf-category">Tools & Platforms</span>
           </div>
           <div class="shelf-items">
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 90%"><div class="ingredient-icon" id="icon-git"></div><div class="ingredient-info"><span class="ingredient-name">Git</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Essential</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 82%"><div class="ingredient-icon" id="icon-figma"></div><div class="ingredient-info"><span class="ingredient-name">Figma</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Design-grade</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 95%"><div class="ingredient-icon" id="icon-vscode"></div><div class="ingredient-info"><span class="ingredient-name">VS Code</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Daily driver</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 75%"><div class="ingredient-icon" id="icon-webpack"></div><div class="ingredient-info"><span class="ingredient-name">Webpack</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Well-seasoned</span></div></div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 90%">
+              <div class="ingredient-icon" id="icon-git"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Git</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Essential</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 82%">
+              <div class="ingredient-icon" id="icon-figma"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Figma</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Design-grade</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 95%">
+              <div class="ingredient-icon" id="icon-vscode"></div>
+              <div class="ingredient-info"><span class="ingredient-name">VS Code</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Daily driver</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="4" style="--proficiency: 75%">
+              <div class="ingredient-icon" id="icon-webpack"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Webpack</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Well-seasoned</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -361,9 +471,30 @@
             <span class="shelf-category">SEO & Optimization</span>
           </div>
           <div class="shelf-items">
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 96%"><div class="ingredient-icon" id="icon-gsap"></div><div class="ingredient-info"><span class="ingredient-name">On-Page SEO</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Motion magic</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 85%"><div class="ingredient-icon" id="icon-threejs"></div><div class="ingredient-info"><span class="ingredient-name">Technical SEO</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Experimental batch</span></div></div>
-            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 89%"><div class="ingredient-icon" id="icon-framer"></div><div class="ingredient-info"><span class="ingredient-name">Performance Optimization</span><div class="proficiency-bar"><div class="proficiency-fill"></div></div><span class="ingredient-freshness">Smooth blend</span></div></div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="1" style="--proficiency: 96%">
+              <div class="ingredient-icon" id="icon-gsap"></div>
+              <div class="ingredient-info"><span class="ingredient-name">On-Page SEO</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Motion magic</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="2" style="--proficiency: 85%">
+              <div class="ingredient-icon" id="icon-threejs"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Technical SEO</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Experimental batch</span>
+              </div>
+            </div>
+            <div class="ingredient-badge" data-animate="pop-in" data-animate-delay="3" style="--proficiency: 89%">
+              <div class="ingredient-icon" id="icon-framer"></div>
+              <div class="ingredient-info"><span class="ingredient-name">Performance Optimization</span>
+                <div class="proficiency-bar">
+                  <div class="proficiency-fill"></div>
+                </div><span class="ingredient-freshness">Smooth blend</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -379,8 +510,8 @@
     <section id="recipe" class="section section--dark">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">The Recipe</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">From raw dough to golden crust. Here's how the magic happens.</p>
-
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">From raw dough to golden crust. Here's
+          how the magic happens.</p>
         <div class="timeline">
 
           <div class="recipe-step" data-animate="fade-right">
@@ -388,7 +519,8 @@
             <div class="step-card">
               <h3 class="step-recipe-name">Prep the Dough</h3>
               <span class="step-real-name">Order Intake & Discovery</span>
-              <p class="step-description">We knead through your goals, audience, and competitors. Every great website starts with understanding what makes your business unique.</p>
+              <p class="step-description">We knead through your goals, audience, and competitors. Every great website
+                starts with understanding what makes your business unique.</p>
               <span class="step-duration">⏱️ 2–3 days</span>
               <div class="chef-note">A rushed dough never rises. Take time with this step — it shapes everything.</div>
             </div>
@@ -399,7 +531,8 @@
             <div class="step-card">
               <h3 class="step-recipe-name">Choose Your Toppings</h3>
               <span class="step-real-name">Design & Wireframing</span>
-              <p class="step-description">You pick the flavors, I arrange them beautifully. Layouts, content flow, and interface structure - tasted and approved before we fire up the oven.</p>
+              <p class="step-description">You pick the flavors, I arrange them beautifully. Layouts, content flow, and
+                interface structure - tasted and approved before we fire up the oven.</p>
               <span class="step-duration">⏱️ 3–5 days</span>
               <div class="chef-note">Less can be more. The best pizzas don't need 47 toppings.</div>
             </div>
@@ -410,7 +543,9 @@
             <div class="step-card">
               <h3 class="step-recipe-name">Into the Oven</h3>
               <span class="step-real-name">Development</span>
-              <p class="step-description">This is where the kitchen gets hot. Clean code, dynamic functionality, and carefully layered development come together to transform the recipe into a fully baked digital experience.</p>
+              <p class="step-description">This is where the kitchen gets hot. Clean code, dynamic functionality, and
+                carefully layered development come together to transform the recipe into a fully baked digital
+                experience.</p>
               <span class="step-duration">⏱️ 1–4 weeks</span>
               <div class="chef-note">I keep the oven door closed — no peeking! But I'll send you progress updates.</div>
             </div>
@@ -421,7 +556,8 @@
             <div class="step-card">
               <h3 class="step-recipe-name">Quality Check</h3>
               <span class="step-real-name">Testing & Review</span>
-              <p class="step-description">No burnt crusts here. Every page is tested for responsiveness, functionality, speed, and usability. Your feedback is the final seasoning before we serve.</p>
+              <p class="step-description">No burnt crusts here. Every page is tested for responsiveness, functionality,
+                speed, and usability. Your feedback is the final seasoning before we serve.</p>
               <span class="step-duration">⏱️ 2–3 days</span>
               <div class="chef-note">Because nobody likes broken checkout buttons or half-cooked mobile layouts.</div>
             </div>
@@ -432,7 +568,8 @@
             <div class="step-card">
               <h3 class="step-recipe-name">Serve Hot</h3>
               <span class="step-real-name">Launch & Delivery</span>
-              <p class="step-description">Fresh from the oven and deployed to your domain. Optimized, launch-ready, and prepared to serve your audience at full speed.</p>
+              <p class="step-description">Fresh from the oven and deployed to your domain. Optimized, launch-ready, and
+                prepared to serve your audience at full speed.</p>
               <span class="step-duration">⏱️ 1 day</span>
               <div class="chef-note">Launching is the beginning, not the end. I stick around for seconds.</div>
             </div>
@@ -449,21 +586,25 @@
     <section id="chef-specials" class="section">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">Chef's Specials</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Our finest creations. Made with love and late nights.</p>
-
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Our finest creations. Made with love
+          and late nights.</p>
         <div class="polaroid-grid">
 
           <article class="polaroid" data-animate="pop-in" data-animate-delay="1">
             <div class="polaroid-image">
-              <div class="polaroid-image-placeholder" aria-label="View My Design Academia"><img src="assets/images/logo.avif" alt="My Design Academia Logo" class="logo"></div>
+              <div class="polaroid-image-placeholder" aria-label="View My Design Academia"><img
+                  src="assets/images/logo.avif" alt="My Design Academia Logo" class="logo"></div>
               <div class="polaroid-overlay">
-                <a href="https://mydesignacademia.com/" class="btn btn-neon" aria-label="View  My Design Academia ">👀 Taste It</a>
+                <a href="https://mydesignacademia.com/" class="btn btn-neon" aria-label="View  My Design Academia ">👀
+                  Taste It</a>
               </div>
             </div>
             <div class="polaroid-caption">
               <h3 class="polaroid-dish-name">The Signature Slice</h3>
               <span class="polaroid-real-name"> My Design Academia</span>
-                <p class="polaroid-description">A fully developed educational website built with responsive design, enquiry functionality, SEO optimization, and a clean user journey crafted for student conversions.</p>              <div class="polaroid-tags">
+              <p class="polaroid-description">A fully developed educational website built with responsive design,
+                enquiry functionality, SEO optimization, and a clean user journey crafted for student conversions.</p>
+              <div class="polaroid-tags">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
@@ -479,16 +620,20 @@
 
           <article class="polaroid" data-animate="pop-in" data-animate-delay="2">
             <div class="polaroid-image">
-              <div class="polaroid-image-placeholder" aria-label="Arcadia Architecture Studio project screenshot"><img src="assets/images/pizzascript-logo.webp" alt="Pizza Script" class="logo"></div>
+              <div class="polaroid-image-placeholder" aria-label="Arcadia Architecture Studio project screenshot"><img
+                  src="assets/images/pizzascript-logo.webp" alt="Pizza Script" class="logo"></div>
               <div class="polaroid-overlay">
-                <a href="https://pizzzascript.github.io/pizzzascript/" class="btn btn-neon" aria-label="View Arcadia Architecture Studio project">👀 Taste It</a>
+                <a href="https://pizzzascript.github.io/pizzzascript/" class="btn btn-neon"
+                  aria-label="View Arcadia Architecture Studio project">👀 Taste It</a>
               </div>
             </div>
             <div class="polaroid-caption">
               <h3 class="polaroid-dish-name">The House Special</h3>
               <span class="polaroid-real-name">Pizza Script</span>
-               <p class="polaroid-description">The official Pizza Script digital kitchen - a creative portfolio experience built to showcase frontend craftsmanship, interactive UI, brand storytelling, and performance-focused development.</p>         
-                 <div class="polaroid-tags">
+              <p class="polaroid-description">The official Pizza Script digital kitchen - a creative portfolio
+                experience built to showcase frontend craftsmanship, interactive UI, brand storytelling, and
+                performance-focused development.</p>
+              <div class="polaroid-tags">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
                 <span class="tag">JavaScript</span>
@@ -500,54 +645,6 @@
               </div>
             </div>
           </article>
-
-          <!-- <article class="polaroid" data-animate="pop-in" data-animate-delay="3">
-            <div class="polaroid-image">
-              <div class="polaroid-image-placeholder" aria-label="FitPulse Fitness Tracker project screenshot">💪</div>
-              <div class="polaroid-overlay">
-                <a href="#" class="btn btn-neon" aria-label="View FitPulse Fitness Tracker project">👀 Taste It</a>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h3 class="polaroid-dish-name">The BBQ Blazer</h3>
-              <span class="polaroid-real-name">FitPulse Fitness Tracker</span>
-              <p class="polaroid-description">A full-stack fitness dashboard with real-time data visualization, user profiles, and workout tracking. Heavy on the features, light on the load time.</p>
-              <div class="polaroid-tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">Firebase</span>
-              </div>
-              <div class="polaroid-meta">
-                <span>⏱️ 8 weeks</span>
-                <span class="polaroid-flavor">Spicy & Technical</span>
-              </div>
-            </div>
-          </article> -->
-
-          <!-- <article class="polaroid" data-animate="pop-in" data-animate-delay="4">
-            <div class="polaroid-image">
-              <div class="polaroid-image-placeholder" aria-label="Willow and Sage Florist project screenshot">🌸</div>
-              <div class="polaroid-overlay">
-                <a href="#" class="btn btn-neon" aria-label="View Willow and Sage Florist project">👀 Taste It</a>
-              </div>
-            </div>
-            <div class="polaroid-caption">
-              <h3 class="polaroid-dish-name">The Garden Fresh</h3>
-              <span class="polaroid-real-name">Willow & Sage Florist</span>
-              <p class="polaroid-description">A charming website for a local florist with online ordering, seasonal collections, and a design that blooms on every screen size.</p>
-              <div class="polaroid-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Figma</span>
-              </div>
-              <div class="polaroid-meta">
-                <span>⏱️ 3 weeks</span>
-                <span class="polaroid-flavor">Fresh & Charming</span>
-              </div>
-            </div>
-          </article> -->
 
         </div>
       </div>
@@ -562,46 +659,47 @@
     <section id="reviews" class="section">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">Happy Customers</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Don't take our word for it. Read the reviews.</p>
-
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Don't take our word for it. Read the
+          reviews.</p>
         <div class="corkboard" data-animate="fade-up">
           <div class="corkboard-inner">
 
             <div class="testimonial-pin">
-           <p class="testimonial-quote">Working with Pizza Script was smooth from start to finish. The communication was clear, timelines were respected, and the final website felt polished and thoughtfully built.</p>     
-            <div class="testimonial-rating" aria-label="5 out of 5 rating">🍕🍕🍕🍕🍕</div>
+              <p class="testimonial-quote">Working with Pizza Script was smooth from start to finish. The communication
+                was clear, timelines were respected, and the final website felt polished and thoughtfully built.</p>
+              <div class="testimonial-rating" aria-label="5 out of 5 rating">🍕🍕🍕🍕🍕</div>
               <div class="testimonial-author">
                 <span class="testimonial-author-name">Neeraj </span>
-                <!-- <span class="testimonial-author-role">Founder, My Design Academia</span> -->
                 <span class="testimonial-date">March 2026</span>
               </div>
             </div>
 
             <div class="testimonial-pin">
-              <p class="testimonial-quote">We needed a clean, responsive website without unnecessary complexity, and Pizza Script delivered exactly that. Fast, professional, and easy to collaborate with.</p>
+              <p class="testimonial-quote">We needed a clean, responsive website without unnecessary complexity, and
+                Pizza Script delivered exactly that. Fast, professional, and easy to collaborate with.</p>
               <div class="testimonial-rating" aria-label="5 out of 5 rating">🍕🍕🍕🍕🍕</div>
               <div class="testimonial-author">
                 <span class="testimonial-author-name">Ankita </span>
-                <!-- <span class="testimonial-author-role">Creative Director, Arcadia Studio</span> -->
                 <span class="testimonial-date">April 2026</span>
               </div>
             </div>
 
             <div class="testimonial-pin">
-              <p class="testimonial-quote">What stood out most was the attention to detail. From mobile responsiveness to performance tweaks, everything felt carefully crafted rather than rushed.</p>
+              <p class="testimonial-quote">What stood out most was the attention to detail. From mobile responsiveness
+                to performance tweaks, everything felt carefully crafted rather than rushed.</p>
               <div class="testimonial-rating" aria-label="4 out of 5 rating">🍕🍕🍕🍕</div>
               <div class="testimonial-author">
                 <span class="testimonial-author-name">Ajinkya</span>
-                <!-- <span class="testimonial-author-role">CTO, FitPulse</span> -->
                 <span class="testimonial-date">March 2026</span>
               </div>
             </div>
 
             <div class="testimonial-pin">
-              <p class="testimonial-quote">Pizza Script made the technical side feel simple. Feedback was handled quickly, changes were implemented smoothly, and the overall experience felt reliable and professional.</p>
+              <p class="testimonial-quote">Pizza Script made the technical side feel simple. Feedback was handled
+                quickly, changes were implemented smoothly, and the overall experience felt reliable and professional.
+              </p>
               <div class="testimonial-author">
                 <span class="testimonial-author-name">Sarrah </span>
-                <!-- <span class="testimonial-author-role">Owner, Willow & Sage</span> -->
                 <span class="testimonial-date">February 2026</span>
               </div>
             </div>
@@ -625,21 +723,30 @@
     <section id="order" class="section section--alt">
       <div class="container">
         <h2 class="section-title" data-animate="fade-up">Place Your Order</h2>
-        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Got a project craving? Let’s cook up something fresh.</p>
-
+        <p class="section-subtitle" data-animate="fade-up" data-animate-delay="1">Got a project craving? Let’s cook up
+          something fresh.</p>
         <div class="order-pad" data-animate="fade-up" data-animate-delay="2">
-          <form id="order-form" novalidate>
+          <form id="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
 
             <div class="form-group" id="field-name">
               <label for="customer-name" class="form-label">Your Name</label>
-              <input type="text" id="customer-name" name="customer_name" class="form-input" placeholder="Chef needs to know who's ordering" required>
+              <input type="text" id="customer-name" name="customer_name" class="form-input"
+                placeholder="Chef needs to know who's ordering" required>
               <span class="form-error" id="error-name">Every order needs a name, Chef.</span>
             </div>
 
             <div class="form-group" id="field-email">
               <label for="customer-email" class="form-label">Your Email</label>
-              <input type="email" id="customer-email" name="email" class="form-input" placeholder="Where should we send the receipt?" required>
+              <input type="email" id="customer-email" name="email" class="form-input"
+                placeholder="Where should we send the receipt?" required>
               <span class="form-error" id="error-email">We need a valid email to send your order confirmation.</span>
+            </div>
+
+            <div class="form-group" id="field-phone">
+              <label for="customer-phone" class="form-label">Contact Number</label>
+              <input type="tel" id="customer-phone" name="phone" class="form-input"
+                placeholder="Your WhatsApp / mobile number" pattern="[0-9+\s\-]{7,15}">
+              <span class="form-error" id="error-phone">Please enter a valid contact number.</span>
             </div>
 
             <div class="form-group" id="field-project">
@@ -658,17 +765,20 @@
 
             <div class="form-group range-group" id="field-budget">
               <label for="budget" class="form-label">How Much Dough? 💰</label>
-              <div class="range-value" id="budget-display">3,000</div>
-              <input type="range" id="budget" name="budget" class="form-range" min="100" max="10000" step="100" value="3000">
+              <div class="range-value" id="budget-display">₹15,000</div>
+              <input type="range" id="budget" name="budget" class="form-range" min="5000" max="50000" step="5000"
+                value="15000">
             </div>
 
             <div class="form-group" id="field-details">
               <label for="details" class="form-label">Special Instructions</label>
-              <textarea id="details" name="details" class="form-textarea" placeholder="Extra toppings? Dietary restrictions? Tell me everything..." rows="5"></textarea>
+              <textarea id="details" name="details" class="form-textarea"
+                placeholder="Extra toppings? Dietary restrictions? Tell me everything..." rows="5"></textarea>
             </div>
 
             <div class="form-submit">
-              <button type="submit" class="btn btn-primary" id="submit-btn" aria-label="Submit your project inquiry">🔥 Fire Up the Oven!</button>
+              <button type="submit" class="btn btn-primary" id="submit-btn" aria-label="Submit your project inquiry">🔥
+                Fire Up the Oven!</button>
             </div>
 
           </form>
@@ -687,7 +797,7 @@
 
         <div class="receipt-header">
           <div class="receipt-logo">🍕 Pizza Script</div>
-         <p class="receipt-tagline">Fresh code. Clean builds. Served hot.</p> 
+          <p class="receipt-tagline">Fresh code. Clean builds. Served hot.</p>
         </div>
 
         <div class="receipt-items">
@@ -712,20 +822,16 @@
         <div class="receipt-social">
           <p class="receipt-social-label">Get In Touch With The Chef:</p>
           <div class="social-links">
-            <!-- <a href="https://github.com/pizzzascript/" target="_blank" class="social-link" aria-label="Visit Pizza Script GitHub">GitHub</a> -->
             <a href="mailto:pizzzascript@gmail.com" class="social-link" aria-label="Email Pizza Script">Email</a>
-            <a href="tel:+919356636203" class="social-link" aria-label="Call Pizza Script">
-  📞 +91 93566 36203
-</a>
-            <a href="https://wa.me/919356636203" target="_blank" class="social-link" aria-label="Chat with Pizza Script on WhatsApp"> WhatsApp</a>
+            <a href="tel:+919356636203" class="social-link" aria-label="Call Pizza Script">📞 +91 93566 36203</a>
+            <a href="https://wa.me/919356636203" target="_blank" class="social-link"
+              aria-label="Chat with Pizza Script on WhatsApp"> WhatsApp</a>
           </div>
         </div>
 
-        <!-- <div class="receipt-easter-egg">
-          <a href="#" aria-label="Support the chef with a tip on Buy Me a Coffee">☕ Buy Pizza Script a Coffee</a>
-        </div> -->
-
-        <p class="receipt-copyright">© <script>document.write(new Date().getFullYear())</script> Pizza Script</p>
+        <p class="receipt-copyright">©
+          <script>document.write(new Date().getFullYear())</script> Pizza Script
+        </p>
 
       </div>
     </div>
@@ -744,4 +850,5 @@
   <script src="js/main.js" defer></script>
 
 </body>
+
 </html>

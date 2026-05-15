@@ -1,6 +1,6 @@
 /* ============================================
    🍕 PIZZA SCRIPT — Form Handling
-   Client-side validation and submit animation.
+   Client-side validation + Formspree submission.
    ============================================ */
 
 function initForm() {
@@ -12,10 +12,10 @@ function initForm() {
 
   if (!form) return;
 
-  // ---- Budget slider live update ----
+  // ---- Budget slider live update (INR) ----
   function updateBudgetDisplay() {
     const value = parseInt(budgetSlider.value);
-    budgetDisplay.textContent = '$' + value.toLocaleString();
+    budgetDisplay.textContent = '₹' + value.toLocaleString('en-IN');
   }
 
   budgetSlider.addEventListener('input', updateBudgetDisplay);
@@ -66,47 +66,50 @@ function initForm() {
     }
   });
 
-  // ---- Form submit ----
-  form.addEventListener('submit', (e) => {
+  // ---- Form submit → Formspree ----
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Validate all required fields
-    const nameValid = validateField('name');
-    const emailValid = validateField('email');
+    const nameValid    = validateField('name');
+    const emailValid   = validateField('email');
     const projectValid = validateField('project');
 
     if (!nameValid || !emailValid || !projectValid) {
-      // Focus first invalid field
-      if (!nameValid) document.getElementById('customer-name').focus();
+      if (!nameValid)       document.getElementById('customer-name').focus();
       else if (!emailValid) document.getElementById('customer-email').focus();
-      else if (!projectValid) document.getElementById('project-type').focus();
+      else                  document.getElementById('project-type').focus();
       return;
     }
 
-    // Simulate submission
     const originalText = submitBtn.textContent;
     submitBtn.textContent = '🔥 Firing up the oven...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      formMessage.className = 'form-message success';
-      formMessage.textContent = '🍕 Order received! I\'ll start preheating your project and get back to you within 24 hours.';
-      formMessage.style.display = 'block';
-      submitBtn.textContent = '✅ Order Placed!';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
 
-      // Reset after delay
-      setTimeout(() => {
+      if (response.ok) {
+        formMessage.className = 'form-message success';
+        formMessage.textContent = '🍕 Order received! I\'ll start preheating your project and get back to you within 24 hours.';
         form.reset();
         updateBudgetDisplay();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        formMessage.style.display = 'none';
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('error', 'valid'));
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      formMessage.className = 'form-message error';
+      formMessage.textContent = '⚠️ Something went wrong. Please email me directly at pizzzascript@gmail.com';
+    }
 
-        // Remove validation classes
-        document.querySelectorAll('.form-group').forEach(g => {
-          g.classList.remove('error', 'valid');
-        });
-      }, 4000);
-    }, 2000);
+    formMessage.style.display = 'block';
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+
+    setTimeout(() => { formMessage.style.display = 'none'; }, 6000);
   });
 }
